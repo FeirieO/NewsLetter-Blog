@@ -29,8 +29,6 @@ app.get('/', (req, res) => {
 
 });
 
-
-app.use('/api/route', route);
  //This is the Not Found Middleware 
 app.use(middleware.notFound);
 app.use(middleware.errorHandler);
