@@ -4,9 +4,11 @@ const helmet = require("helmet");
 const cors = require("cors");
 const mongoose = require('mongoose');
 
+
 require('dotenv').config();
 
 const middleware = require('./middleware');
+const route = require('./api/route');
 
 const app = express();
 
@@ -26,6 +28,9 @@ app.get('/', (req, res) => {
     })
 
 });
+
+
+app.use('/api/route', route);
  //This is the Not Found Middleware 
 app.use(middleware.notFound);
 app.use(middleware.errorHandler);
