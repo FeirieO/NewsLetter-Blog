@@ -46,3 +46,6 @@ const mongoose = require('mongoose');
 
     
   ;
+  const LogEntry = mongoose.model('LogEntry', LogEntrySchema);
+
+  module.exports = LogEntry;
