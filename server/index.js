@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const middleware = require('./middleware');
-const route = require('./api/route');
+const logs = require('./api/logs');
 
 const app = express();
 
@@ -25,9 +25,10 @@ app.use(cors({
 app.get('/', (req, res) => {
     res.json({
        message: 'Oops, there is no message here'
-    })
+    });
 
 });
+app.use('/api/logs', logs);
 
  //This is the Not Found Middleware 
 app.use(middleware.notFound);
