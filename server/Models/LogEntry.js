@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
       required: true,
   },
 
-  const defaultRequiredDate = {
+   defaultRequiredDate = {
     type: Date, 
     default: Date.now,
 
@@ -25,17 +25,7 @@ const mongoose = require('mongoose');
         max : 10,
         default :0,
     },
-    latitude: {
-        requiredNumber,
-        min: -90,
-        max: 90,
-
-    },
-    longitude: {
-        requiredNumber,
-        min: -180,
-        max: 180,
-    },
+   
     visitDate: {
         required: true,
         type: Date,
